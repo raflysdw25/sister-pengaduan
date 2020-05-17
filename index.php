@@ -174,6 +174,7 @@
                           </div>
                       </div>  
                    </div>
+                   <a href="#" class="btn btn-cta mx-auto">Lihat Seluruh Laporan</a>
                </div>
            </div>
        </section>
