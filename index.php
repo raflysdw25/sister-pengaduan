@@ -9,13 +9,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengaduan Masyarakat Jakarta</title>
+    <link rel="icon" href="assets/img/group2.png" type="image/gif" sizes="16x16">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navigasi -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 shadow-sm p-3 mb-5 bg-white">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <img src="assets/img/group2.png" class="img-fluid" alt="">
@@ -56,7 +57,7 @@
 
    <main>
        <div class="container">
-            <section class="section-steps row justify-content-center">
+            <section class="section-steps row justify-content-center shadow-sm p-3 mb-5 bg-white">
                 <div class="col-3 col-md-2 steps-item">
                     <img src="assets/img/ballpoint.png" alt="">
                     <h2>Tulis Laporan</h2>
@@ -111,12 +112,13 @@
        <section class="section-laporan-content">
            <div class="container">
                <div class="section-aduan row">
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
+                   <div class="col-sm col-md-4 col-lg-4">
+                      <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
                           <div class="aduan-judul">
                               <h3>Judul Laporan</h3>
                               <small class="badge bg-secondary text-white">Kesehatan</small>
                               <small class="badge verify">
+                                  <img src="assets/img/selesai.png" alt="">
                                    Selesai
                               </small>
                           </div>
@@ -132,12 +134,13 @@
                           </div>
                       </div>  
                    </div>
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
+                   <div class="col-sm col-md-4 col-lg-4">
+                      <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
                           <div class="aduan-judul">
                               <h3>Judul Laporan</h3>
                               <small class="badge bg-secondary text-white">Kesehatan</small>
                               <small class="badge action">
+                                    <img src="assets/img/followup-orange.png" alt="">
                                    Tindak Lanjut
                               </small>
                           </div>
@@ -153,12 +156,13 @@
                           </div>
                       </div>  
                    </div>
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
+                   <div class="col-sm col-md-4 col-lg-4">
+                      <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
                           <div class="aduan-judul">
                               <h3>Judul Laporan</h3>
                               <small class="badge bg-secondary text-white">Kesehatan</small>
                               <small class="badge danger">
+                                <img src="assets/img/verif-red.png" alt="">
                                    Terverifikasi
                               </small>
                           </div>
@@ -184,8 +188,8 @@
             <div class="message-aspirasi row">
                 <div class="container">
                     <div class="col-lg-8">
-                    <h2>Sampaikan Aspirasi</h2>  
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laudantium quibusdam, ratione dolorum commodi labore doloribus quidem assumenda totam minus eaque unde sed blanditiis. Omnis sunt maxime error illum qui.</p>
+                        <h2>Sampaikan Aspirasi</h2>  
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laudantium quibusdam, ratione dolorum commodi labore doloribus quidem assumenda totam minus eaque unde sed blanditiis. Omnis sunt maxime error illum qui.</p>
                     </div>
                 </div>
              </div>
@@ -194,7 +198,7 @@
 
    <footer class="section-footer bg-dark text-white">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="col-12 p-5">
                     <div class="row">
                         <div class="col-12 col-lg-5">
@@ -210,7 +214,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-7 text-right">
+                        <div class="col-12 col-lg-7 text-right footer-sosmed">
                             <h4>Sosial Media</h4>
                             <ul class="list-unstyled">
                                 <li class="d-inline mr-2">
@@ -235,7 +239,7 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row border-top justify-content-center align-items-center p-4">
+            <div class="row border-top justify-content-center align-items-center p-3">
                 <div class="col-auto">
                         2020 Copyright Kantor Pelayanan Masyarakat Indonesia
                 </div>

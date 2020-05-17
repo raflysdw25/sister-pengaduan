@@ -8,8 +8,8 @@ body{
 }
 
 header{
-    padding-top: 30px;
-    min-height: 500px;
+    padding-top: 80px;
+    min-height: 985px;
     background-image: url('../img/background2.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,6 +32,10 @@ header > p{
     color: #8FA4E9 !important;
 }
 
+.pp{
+    padding-right: 5px;
+}
+
 .btn{
     border-radius: 100px;
     padding: 10px 30px;
@@ -49,17 +53,18 @@ header > p{
     border: 1px solid #8FA4E9;
 }
 
-
 .section-steps{
-    margin-top: -70px;
+    margin-top: -33%;
     margin-bottom: 50px;
     text-align: center;
     background-color: #fff;
-    border: 1px solid #cfcdcd;
+    border: 1px solid #fff;
     border-radius: 30px;
+    position: relative;
 }
 
 .section-steps .steps-item{
+    background-color: #fff;
     padding: 12px;
     margin-right: 20px;
 }
@@ -82,12 +87,20 @@ header > p{
     padding: 5px 10px;
 }
 
+.verify img{
+    height: 16px;
+}
+
 .action{
     background-color: #fff;
     border: 1px solid orange;
     color: orange;
     border-radius: 20px;
     padding: 5px 10px;
+}
+
+.action img{
+    height: 16px;
 }
 
 .danger{
@@ -98,8 +111,13 @@ header > p{
     padding: 5px 10px;
 }
 
+.danger img{
+    height: 16px;
+}
+
 .section-laporan .laporan-heading{
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .section-laporan .laporan-heading h2{
@@ -117,7 +135,7 @@ header > p{
     background-size: cover;
     padding: 30px;
     border-radius: 40px;
-    border: 1px solid #707070;
+    border: 1px solid #c0c0c0;
     margin-bottom: 50px;
 }
 
@@ -132,7 +150,6 @@ header > p{
     font-size: 16px;
     font-weight: lighter;
 }
-
 
 .section-laporan-content .section-aduan .aduan-pelapor .pelapor-image{
     float: left;
@@ -153,7 +170,7 @@ header > p{
     position: relative;   
     width: 100%;
     height: 500px;
-    padding: 200px 0;
+    padding: 125px 0;
 }
 
 .section-aspirasi .message-aspirasi:before{
@@ -168,11 +185,10 @@ header > p{
 }
 
 .section-aspirasi .message-aspirasi{
-    background-color: aquamarine;
+    background-color: #DEF9F3;
     width: 100%;
-    padding: 40px;  
+    padding: 30px;  
 }
-
 
 /* Footer */
 .img-footer{
@@ -180,7 +196,7 @@ header > p{
 }
 
 .img-sosmed{
-    width: 36px;
+    width: 32px;
 }
 
 .footer-address{
@@ -189,11 +205,60 @@ header > p{
 }
 
 .footer-address h2{
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.footer-sosmed h4{
+    font-size: 20px;
 }
 
 .footer-address p{
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.7px;
 }
 
+@media only screen and (min-width: 992px) {
+    .section-steps .steps-item:nth-child(2)::before{
+        content: "";
+        display: block;
+        width: 100px;
+        left: -35%;
+        top: 22%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+    }
+    
+    .section-steps .steps-item:nth-child(3)::before{
+        content: "";
+        display: block;
+        width: 100px;
+        left: -35%;
+        top: 22%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+    }
+    
+    .section-steps .steps-item:nth-child(4)::before{
+        content: "";
+        display: block;
+        width: 100px;
+        left: -35%;
+        top: 22%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+    }
+    
+    .section-steps .steps-item:nth-child(5)::before{
+        content: "";
+        display: block;
+        width: 100px;
+        left: -35%;
+        top: 22%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+    }
+}
