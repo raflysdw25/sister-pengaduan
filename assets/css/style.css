@@ -1,0 +1,199 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding-top: 30px;
+    min-height: 500px;
+    background-image: url('../img/background2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header > p{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+#more-info{
+    padding-top: 50px;
+}
+
+#more-info p{
+    font-size: 18px;
+}
+
+.nav-link{
+    color: #8FA4E9 !important;
+}
+
+.btn{
+    border-radius: 100px;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
+.btn-cta{
+    background-color: #8FA4E9;
+    color: #fff;
+}
+
+.btn-cta-outline{
+    background-color: #fff;
+    color: #8FA4E9;
+    border: 1px solid #8FA4E9;
+}
+
+
+.section-steps{
+    margin-top: -70px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #cfcdcd;
+    border-radius: 30px;
+}
+
+.section-steps .steps-item{
+    padding: 12px;
+    margin-right: 20px;
+}
+
+.section-steps img{
+    margin: 20px;
+    width: 64px;
+}
+
+.section-steps  h2{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.verify{
+    background-color: #fff;
+    border: 1px solid #28a745;
+    color: #28a745;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.action{
+    background-color: #fff;
+    border: 1px solid orange;
+    color: orange;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.danger{
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.section-laporan .laporan-heading{
+    margin-top: 20px;
+}
+
+.section-laporan .laporan-heading h2{
+    font-size: 25px;
+}
+
+.section-laporan .laporan-heading p{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.section-laporan-content .section-aduan .card-aduan{
+    min-height: 250px;
+    background-color: #fff;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 40px;
+    border: 1px solid #707070;
+    margin-bottom: 50px;
+}
+
+.section-laporan-content .section-aduan .aduan-judul h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section-laporan-content .section-aduan .aduan-isi{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+
+.section-laporan-content .section-aduan .aduan-pelapor .pelapor-image{
+    float: left;
+}
+
+.section-laporan-content .section-aduan .aduan-pelapor h3{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.section-laporan-content .section-aduan .aduan-pelapor .description{
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.section-aspirasi{
+    position: relative;   
+    width: 100%;
+    height: 500px;
+    padding: 200px 0;
+}
+
+.section-aspirasi .message-aspirasi:before{
+    content: '';
+    position: absolute;
+    background-image: url('../img/illustration2.png');
+    bottom: 0;
+    background-repeat: no-repeat;
+    right: 0px;
+    width: 390px;
+    height: 100%;
+}
+
+.section-aspirasi .message-aspirasi{
+    background-color: aquamarine;
+    width: 100%;
+    padding: 40px;  
+}
+
+
+/* Footer */
+.img-footer{
+    float: left;
+}
+
+.img-sosmed{
+    width: 36px;
+}
+
+.footer-address{
+    float: right;
+    overflow: hidden;
+}
+
+.footer-address h2{
+    font-size: 24px;
+}
+
+.footer-address p{
+    font-size: 18px;
+    letter-spacing: 0.7px;
+}
+
