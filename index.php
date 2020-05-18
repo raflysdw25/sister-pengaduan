@@ -12,17 +12,20 @@
         <p class="mt-3">
             Sampaikan Laporan Anda Langsung ke Instansi yang Berwenang
         </p> 
-        <a href="#" class="btn btn-cta">
+        <button type="button" class="btn btn btn-cta" data-toggle="modal" data-target="#modalLogin">
             Masuk
-        </a> 
-        <a href="#" class="btn btn-cta-outline">
+        </button>
+        <button type="button" class="btn btn-cta-outline" data-toggle="modal" data-target="#modalSignup">
             Daftar
-        </a> 
+        </button>           
     </header> 
+    <!-- Modal -->
+    <?php include('signin.php'); ?>
+    <?php include('signup.php'); ?>
     <!-- Main Content -->
     <main>
         <!-- Alur Pengaduan Section -->
-       <div class="container">
+        <div class="container">
             <section class="section-steps row justify-content-center shadow-sm p-3 mb-5 bg-white">
                 <div class="col-3 col-md-2 steps-item">
                     <img src="assets/img/ballpoint.png" alt="">
@@ -61,7 +64,7 @@
                 </div>
             </section>
         </div>
-       <!-- Jumlah Laporan Section -->
+        <!-- Jumlah Laporan Section -->
         <section class="section-laporan">
             <div class="container">
                 <div class="row">
@@ -72,7 +75,7 @@
                 </div>
             </div>
         </section>
-       <!-- Sneak Peek Laporan Section -->
+        <!-- Sneak Peek Laporan Section -->
         <section class="section-laporan-content">
             <div class="container">
                 <div class="section-aduan row">
