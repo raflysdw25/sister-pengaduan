@@ -10,7 +10,7 @@
             <ul class="navbar-nav">
                 <!--jika sudah login -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">LAPORAN</a>
+                    <a class="nav-link" href="page_laporan.php">LAPORAN</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tambah_aspirasi.php">ASPIRASI</a>
