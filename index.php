@@ -169,7 +169,7 @@
       
     </main>
     <!-- Footer -->
-    <?php include('layouts/footer.php'); ?>>
+    <?php include('layouts/footer.php'); ?>
 
    <script src="assets/js/jquery.js"></script> 
    <script src="assets/js/bootstrap.min.js"></script> 
