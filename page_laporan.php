@@ -96,7 +96,7 @@
                         </div>
                         <!-- Button Tambah Laporan -->
                         <div>
-                            <a href="tambah_pengaduan.php" class="btn btn-cta" style="width:22rem;"><i class="fas fa-plus">   Tambah Laporan Pengaduan</i></a>
+                            <a href="tambah_pengaduan.php" class="btn btn-cta" style="width:22rem;"><i class="fas fa-plus">   Tambah Laporan</i></a>
                         </div>
                         <!-- Kategori Populer -->
                         <div class="card" style="margin-top: 20px;">
