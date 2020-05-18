@@ -10,7 +10,7 @@
         $image = 'verif-red.png';
     }   
 ?>
-<div class="row list-content-laporan">
+<div class="row list-content-laporan" style="margin-bottom:35px;">
     <div class="col-2">
         <img src="assets/img/members-2.png" style="width: 55px;" class="rounded mx-auto d-block">
     </div>
@@ -57,4 +57,5 @@
         </div> 
     </div>
 </div>
+<hr/>
 <?php endforeach; ?>
