@@ -115,6 +115,31 @@ header > p{
     height: 16px;
 }
 
+.divider-profile{
+    margin-top: -12%;
+    margin-left: 1%;
+    position: relative;
+}
+
+.divider-profile img{
+    border: 3px solid white;
+    width: 75px;
+    border-radius: 50%;
+}
+
+.body-number{
+    margin-top: -3%;
+}
+
+.number-laporan{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+aside{
+    background-color: white;
+}
+
 .section-laporan .laporan-heading{
     margin-top: 20px;
     margin-bottom: 30px;
@@ -164,6 +189,10 @@ header > p{
     float: left;
     margin-left: 10px;
     overflow: hidden;
+}
+
+.card-profile{
+    padding:0;
 }
 
 .section-aspirasi{
