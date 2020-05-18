@@ -1,6 +1,19 @@
 <?php 
     require 'assets/database/functions.php';
+    session_start();
 
+    $query = "SELECT p.*, up.nama, u.username FROM pengaduan p JOIN user_profile up ON (p.up_id = up.up_id) JOIN users u ON (u.user_id = up.user_id) LIMIT 3";
+    $reports = query($query);
+    
+   
+    $count_data = count($reports);
+
+    if(isset($_POST["logout"])){
+        $_SESSION = [];
+        session_unset();
+        session_destroy();
+        header("location:index.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +51,23 @@
                         <a class="nav-link" href="#">FAQ</a>
                     </li>                
                 </ul>
+                <?php if(isset($_SESSION["login"]) && isset($_SESSION["user_id"])):
+                    $user_id = $_SESSION["user_id"];
+                    $user_profile = query("SELECT * FROM user_profile WHERE user_id = $user_id")[0];?>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle btn btn-cta-outline" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <?= $user_profile["nama"] ?>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Dashboard</a>
+                                    <form action="" method="POST">
+                                        <button type="submit" name="logout" onclick="return confirm('Apakah anda ingin keluar ?')" class="dropdown-item">Logout</button>
+                                    </form>
+                                </div>
+                            </li>                               
+                        </ul>
+                <?php endif;?>
             </div>
         </div>
     </nav>
@@ -46,10 +76,10 @@
         <p class="mt-3">
             Sampaikan Laporan Anda Langsung ke Instansi yang Berwenang
         </p> 
-        <a href="#" class="btn btn-cta">
+        <a href="login.php" class="btn btn-cta">
             Masuk
         </a> 
-        <a href="#" class="btn btn-cta-outline">
+        <a href="register.php" class="btn btn-cta-outline">
             Daftar
         </a> 
    </header> 
@@ -102,7 +132,7 @@
                <div class="row">
                    <div class="col text-center laporan-heading">
                        <h2>JUMLAH LAPORAN SAAT INI</h2>
-                       <p>213.071</p>
+                       <p><?= $count_data?></p>
                    </div>
                </div>
            </div>
@@ -110,72 +140,53 @@
        
        <section class="section-laporan-content">
            <div class="container">
-               <div class="section-aduan row">
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge verify">
-                                   Selesai
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge action">
-                                   Tindak Lanjut
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge danger">
-                                   Terverifikasi
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <a href="#" class="btn btn-cta mx-auto">Lihat Seluruh Laporan</a>
+               <div class="section-aduan row justify-content-center">
+                <?php if($count_data > 0): ?>
+                   <?php foreach($reports as $report):?>
+                   <?php 
+                     if($report["status"] == "Pending"){
+                        $badge = "pending";
+                    }else if($report["status"] == "Verifikasi"){
+                        $badge = "verify";
+                    }else if($report["status"] == "Tindak Lanjut"){
+                        $badge = "action";
+                    }else if($report["status"] == "Selesai"){
+                        $badge = "done";
+                    }
+                    ?>
+                        <div class="col-sm-6 col-md-3 col-lg-4">
+                            <div class="card-aduan d-flex flex-column">
+                                <div class="aduan-judul">
+                                    <h3><?= $report["judul"]?></h3>
+                                    <small class="badge bg-secondary text-white"><?= $report["kategori"]?></small>
+                                    <small class="badge <?= $badge?>">
+                                        <?= $report["status"]?>
+                                    </small>
+                                </div>
+                                <div class="aduan-isi">
+                                    <?= $report["deskripsi"]?>
+                                </div>
+                                <div class="aduan-pelapor">
+                                    <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
+                                    <div class="description">
+                                        <h3><?= $report["nama"] ?></h3>
+                                        <small class="text-muted"><?= $report["username"] ?></small>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div> 
+                   <?php endforeach;?>                                                       
+                <?php else: ?>
+                    <div class="text-center">
+                        <h3 class="text-muted">Belum ada Pengaduan</h3>
+                    </div>
+                <?php endif; ?>                
                </div>
+               <div class="row">
+                        <div class="col-12 text-center">
+                            <a href="#" class="btn btn-cta mx-auto">Lihat Seluruh Laporan</a>
+                        </div>
+                </div> 
            </div>
        </section>
 
