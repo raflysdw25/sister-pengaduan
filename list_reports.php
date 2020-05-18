@@ -24,6 +24,9 @@
             </div>
             <div class="col-12 kategori-laporan">
                 <small class="badge bg-secondary text-white"><?= $report["kategori"]?></small>
+                <span style="font-size: 12px; color: grey;">
+                    <?= $report["instansi"]?>
+                <span>
             </div>
             <div class="col-9 judul-laporan">
                 <span><?= $report["judul"]?></span>

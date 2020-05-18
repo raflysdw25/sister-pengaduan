@@ -13,7 +13,7 @@
                 $image = 'verif-red.png';
             }   
 ?>
-            <div class="row list-content-laporan">
+            <div class="row list-content-laporan" style="margin-bottom:35px;">
                 <div class="col-2">
                     <img src="assets/img/members-2.png" style="width: 55px;" class="rounded mx-auto d-block">
                 </div>
@@ -27,6 +27,9 @@
                         </div>
                         <div class="col-12 kategori-laporan">
                             <small class="badge bg-secondary text-white"><?= $myreport["kategori"]?></small>
+                            <span style="font-size: 12px; color: grey;">
+                                <?= $report["instansi"]?>
+                            <span>
                         </div>
                         <div class="col-9 judul-laporan">
                             <span><?= $myreport["judul"]?></span>
@@ -60,6 +63,7 @@
                     </div> 
                 </div>
             </div>
+            <hr/>
         <?php endforeach; ?>
     <?php else: ?>
         <div class="row list-content-laporan justify-content-center">
