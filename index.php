@@ -1,54 +1,13 @@
 <?php 
     require 'assets/database/functions.php';
-
+    /* Head */
+    include('layouts/head.php');
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengaduan Masyarakat Jakarta</title>
-    <link rel="icon" href="assets/img/group2.png" type="image/gif" sizes="16x16">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
 <body>
     <!-- Navigasi -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 shadow-sm p-3 mb-5 bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="assets/img/group2.png" class="img-fluid" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TENTANG</a>
-                    </li>                
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">KETENTUAN</a>
-                    </li>                
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">KONTAK</a>
-                    </li>                
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
-                    </li>                
-                </ul>
-            </div>
-        </div>
-    </nav>
-   <header id="header" class="text-center">
+    <?php include('layouts/navigation.php'); ?>
+    <!-- Header -->
+    <header id="header" class="text-center">
         <h1>LAYANAN MASYARAKAT ONLINE</h1>
         <p class="mt-3">
             Sampaikan Laporan Anda Langsung ke Instansi yang Berwenang
@@ -59,9 +18,10 @@
         <a href="#" class="btn btn-cta-outline">
             Daftar
         </a> 
-   </header> 
-
-   <main>
+    </header> 
+    <!-- Main Content -->
+    <main>
+        <!-- Alur Pengaduan Section -->
        <div class="container">
             <section class="section-steps row justify-content-center shadow-sm p-3 mb-5 bg-white">
                 <div class="col-3 col-md-2 steps-item">
@@ -78,7 +38,6 @@
                         Dalam 3 hari, laporan anda akan diverifikasi dan diteruskan kepada pihak berwenang
                     </p>
                 </div>
-                
                 <div class="col-3 col-md-2 steps-item">
                     <img src="assets/img/followup.png" alt="">
                     <h2>Tindak Lanjut</h2>
@@ -101,96 +60,95 @@
                     </p>
                 </div>
             </section>
-       </div>
-
-       <!-- Jumlah -->
-       <section class="section-laporan">
-           <div class="container">
-               <div class="row">
-                   <div class="col text-center laporan-heading">
-                       <h2>JUMLAH LAPORAN SAAT INI</h2>
-                       <p>213.071</p>
-                   </div>
-               </div>
-           </div>
-       </section>
-       
-       <section class="section-laporan-content">
-           <div class="container">
-               <div class="section-aduan row">
-                   <div class="col-sm col-md-4 col-lg-4">
-                      <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge verify">
-                                  <img src="assets/img/selesai.png" alt="">
-                                   Selesai
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <div class="col-sm col-md-4 col-lg-4">
-                      <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge action">
+        </div>
+       <!-- Jumlah Laporan Section -->
+        <section class="section-laporan">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center laporan-heading">
+                        <h2>JUMLAH LAPORAN SAAT INI</h2>
+                        <p>213.071</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- Sneak Peek Laporan Section -->
+        <section class="section-laporan-content">
+            <div class="container">
+                <div class="section-aduan row">
+                    <div class="col-sm col-md-4 col-lg-4">
+                        <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
+                            <div class="aduan-judul">
+                                <h3>Judul Laporan</h3>
+                                <small class="badge bg-secondary text-white">Kesehatan</small>
+                                <small class="badge verify">
+                                   <img src="assets/img/selesai.png" alt="">
+                                    Selesai
+                                </small>
+                            </div>
+                            <div class="aduan-isi">
+                               Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                               Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? 
+                               Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
+                            </div>
+                            <div class="aduan-pelapor">
+                                <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
+                                <div class="description">
+                                    <h3>Muhammad Rafly Sadewa</h3>
+                                    <small class="text-muted">raflysdw25</small>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-sm col-md-4 col-lg-4">
+                        <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
+                            <div class="aduan-judul">
+                                <h3>Judul Laporan</h3>
+                                <small class="badge bg-secondary text-white">Kesehatan</small>
+                                <small class="badge action">
                                     <img src="assets/img/followup-orange.png" alt="">
-                                   Tindak Lanjut
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <div class="col-sm col-md-4 col-lg-4">
-                      <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge danger">
+                                    Tindak Lanjut
+                                </small>
+                            </div>
+                            <div class="aduan-isi">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
+                            </div>
+                            <div class="aduan-pelapor">
+                                <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
+                                <div class="description">
+                                    <h3>Muhammad Rafly Sadewa</h3>
+                                    <small class="text-muted">raflysdw25</small>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-sm col-md-4 col-lg-4">
+                        <div class="card-aduan d-flex flex-column shadow-sm p-3 mb-5 bg-white">
+                            <div class="aduan-judul">
+                                <h3>Judul Laporan</h3>
+                                <small class="badge bg-secondary text-white">Kesehatan</small>
+                                <small class="badge danger">
                                 <img src="assets/img/verif-red.png" alt="">
-                                   Terverifikasi
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-               </div>
-           </div>
-       </section>
-
-
-       <!-- Sampaikan Aspirasi -->
-       <section class="section-aspirasi">
+                                    Terverifikasi
+                                </small>
+                            </div>
+                            <div class="aduan-isi">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
+                            </div>
+                            <div class="aduan-pelapor">
+                                <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
+                                <div class="description">
+                                    <h3>Muhammad Rafly Sadewa</h3>
+                                    <small class="text-muted">raflysdw25</small>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- Sampaikan Aspirasi Section-->
+        <section class="section-aspirasi">
             <div class="message-aspirasi row">
                 <div class="container">
                     <div class="col-lg-8">
@@ -199,59 +157,10 @@
                     </div>
                 </div>
              </div>
-       </section>
-   </main>
-
-   <footer class="section-footer bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 p-5">
-                    <div class="row">
-                        <div class="col-12 col-lg-5">
-                            <img src="assets/img/group2.png" alt="" class="img-fluid img-footer">
-                            <div class="footer-address">
-                                <h2>Layanan Masyarakat Online</h2>
-                                <p>
-                                    Jl. Pengembangan Abadi No. 2A <br>
-                                    Jakarta Pusat, DKI Jakarta 154123
-                                </p>
-                                <p>
-                                    (021) 7766521
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-7 text-right footer-sosmed">
-                            <h4>Sosial Media</h4>
-                            <ul class="list-unstyled">
-                                <li class="d-inline mr-2">
-                                    <a href="" class="">
-                                        <img src="assets/img/ig.png" alt="" class="img-fluid img-sosmed">
-                                    </a>
-                                </li>
-                                <li class="d-inline mr-2">
-                                    <a href="" class="">
-                                        <img src="assets/img/twitter.png" alt="" class="img-fluid img-sosmed">
-                                    </a>
-                                </li>
-                                <li class="d-inline">
-                                    <a href="" class="">
-                                        <img src="assets/img/fb.png" alt="" class="img-fluid img-sosmed">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row border-top justify-content-center align-items-center p-3">
-                <div class="col-auto">
-                        2020 Copyright Kantor Pelayanan Masyarakat Indonesia
-                </div>
-            </div>
-        </div>
-   </footer>
+        </section>
+    </main>
+    <!-- Footer -->
+    <?php include('layouts/footer.php'); ?>>
 
    <script src="assets/js/jquery.js"></script> 
    <script src="assets/js/bootstrap.min.js"></script> 
