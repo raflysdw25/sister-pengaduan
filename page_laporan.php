@@ -1,9 +1,24 @@
 <?php 
     require 'assets/database/functions.php';
 
+    session_start();
+    if (!isset($_SESSION["login"])) {
+        echo 
+        "<script> 
+                alert('Anda belum melakukan login, silahkan login terlebih dahulu');
+                document.location = 'index.php';                
+        </script>"; 
+    }
+
+    $user_id = $_SESSION["user_id"];
+
     //Data Laporan
     $reports = query("SELECT p.*, up.nama, up.username FROM pengaduan p JOIN user_profile up ON (p.up_id = up.up_id)");
     $count_data = count($reports);
+
+    // Data Laporan Pribadi
+    $myreports = query("SELECT p.*, up.nama, up.username FROM pengaduan p JOIN user_profile up ON (p.up_id = up.up_id) WHERE p.up_id = $user_id");
+    $count_myreports = count($myreports);
 
     /* Head */
     include('layouts/head.php');
@@ -30,7 +45,7 @@
                             <div class="tab-pane fade show active" id="semua" role="tabpanel" aria-labelledby="semua-tab">
                                 <?php include('list_reports.php') ?>   
                             </div>
-                            <div class="tab-pane fade" id="laporan-saya" role="tabpanel" aria-labelledby="laporan-saya-tab">
+                            <div class="tab-pane fade" id="laporan_saya" role="tabpanel" aria-labelledby="laporan-saya-tab">
                                 <?php include('list_my_reports.php') ?> 
                             </div>
                         </div>

@@ -85,23 +85,24 @@
     function add_laporan($data){
         global $conn;
 
-        if(isset($_SESSION)){
-            session_start();
-        }
-
-        $user_id = $_SESSION["user_id"];
+        $user_id = $data["user_id"];
 
         $judul = htmlspecialchars($data["judulPengaduan"]);
         $isi = htmlspecialchars($data["isiPengaduan"]);
         $jenis = htmlspecialchars($data["jenisPengaduan"]);
-        $tgl = htmlspecialchars($data["tanggalKejadian"]);
+        
+        $tanggal = strtotime($data["tanggalKejadian"]);
+        if( $tanggal ){
+            $tgl = date('Y-m-d', $tanggal);
+        }
+
         $instansi = htmlspecialchars($data["instansiPengaduan"]);
         $kategori = htmlspecialchars($data["kategoriPengaduan"]);
 
         $today = date("Y-m-d H:i:s");
         $query = "INSERT INTO pengaduan
                     VALUES 
-                    ('', '$user_id', $judul', '$kategori', null, '$jenis', '$isi', '$instansi', '$tgl', '$today')";
+                    ('', '$user_id', '$judul', '$kategori', 'Verifikasi', '$jenis', '$isi', '$instansi', '$tgl', '$today')";
         mysqli_query($conn, $query);
         
         return mysqli_affected_rows($conn);
