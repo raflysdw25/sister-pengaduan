@@ -63,7 +63,6 @@
                     </p>
                 </div>
             </section>
-<<<<<<< HEAD
        </div>
 
        <!-- Jumlah -->
@@ -78,101 +77,8 @@
            </div>
        </section>
        
+       <!-- Sneak Peek Laporan Section -->
        <section class="section-laporan-content">
-           <div class="container">
-               <div class="section-aduan row">
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge verify">
-                                   Selesai
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge action">
-                                   Tindak Lanjut
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <div class="col-sm-6 col-md-3 col-lg-4">
-                      <div class="card-aduan d-flex flex-column">
-                          <div class="aduan-judul">
-                              <h3>Judul Laporan</h3>
-                              <small class="badge bg-secondary text-white">Kesehatan</small>
-                              <small class="badge danger">
-                                   Terverifikasi
-                              </small>
-                          </div>
-                          <div class="aduan-isi">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore a ut aperiam amet voluptate id, quo delectus officiis? Fugiat reiciendis repellat sequi commodi explicabo quisquam nihil sapiente molestias dignissimos?
-                          </div>
-                          <div class="aduan-pelapor">
-                              <img src="assets/img/members-1.jpg" alt="" class="pelapor-image">
-                              <div class="description">
-                                  <h3>Muhammad Rafly Sadewa</h3>
-                                  <small class="text-muted">raflysdw25</small>
-                              </div>
-                          </div>
-                      </div>  
-                   </div>
-                   <a href="#" class="btn btn-cta mx-auto">Lihat Seluruh Laporan</a>
-               </div>
-           </div>
-       </section>
-
-
-       <!-- Sampaikan Aspirasi -->
-       <section class="section-aspirasi">
-            <div class="message-aspirasi row">
-                <div class="container">
-                    <div class="col-lg-8">
-                    <h2>Sampaikan Aspirasi</h2>  
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laudantium quibusdam, ratione dolorum commodi labore doloribus quidem assumenda totam minus eaque unde sed blanditiis. Omnis sunt maxime error illum qui.</p>
-=======
-        </div>
-        <!-- Jumlah Laporan Section -->
-        <section class="section-laporan">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center laporan-heading">
-                        <h2>JUMLAH LAPORAN SAAT INI</h2>
-                        <p>213.071</p>
->>>>>>> d26992188d9b111297d78babc405c13c5c7b2900
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Sneak Peek Laporan Section -->
-        <section class="section-laporan-content">
             <div class="container">
                 <div class="section-aduan row">
                     <div class="col-sm col-md-4 col-lg-4">
@@ -246,17 +152,21 @@
                 </div>
             </div>
         </section>
-       <!-- Sampaikan Aspirasi Section-->
-        <section class="section-aspirasi">
+
+
+       <!-- Sampaikan Aspirasi -->
+       <section class="section-aspirasi">
             <div class="message-aspirasi row">
                 <div class="container">
                     <div class="col-lg-8">
-                        <h2>Sampaikan Aspirasi</h2>  
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laudantium quibusdam, ratione dolorum commodi labore doloribus quidem assumenda totam minus eaque unde sed blanditiis. Omnis sunt maxime error illum qui.</p>
+                    <h2>Sampaikan Aspirasi</h2>  
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laudantium quibusdam, ratione dolorum commodi labore doloribus quidem assumenda totam minus eaque unde sed blanditiis. Omnis sunt maxime error illum qui.</p>
                     </div>
                 </div>
-             </div>
+            </div>
         </section>
+        
+      
     </main>
     <!-- Footer -->
     <?php include('layouts/footer.php'); ?>>
