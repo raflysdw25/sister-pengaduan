@@ -20,7 +20,7 @@
     }
 
     //Data Laporan
-    $reports = query("SELECT p.*, up.nama, up.username FROM pengaduan p JOIN user_profile up ON (p.up_id = up.up_id) LIMIT 3");
+    $reports = query("SELECT p.*, up.nama, up.username FROM pengaduan p JOIN user_profile up ON (p.up_id = up.up_id)");
     $count_data = count($reports);
 
     /* Head */
@@ -108,7 +108,9 @@
        <section class="section-laporan-content">
             <div class="container">
                 <div class="section-aduan row justify-content-center">
-                    <?php foreach($reports as $report): 
+                    <?php 
+                    $i = 1;
+                    foreach($reports as $report): 
                         if($report["status"] == "Selesai"){
                             $badge = 'done';
                             $image = 'selesai.png';
@@ -143,7 +145,9 @@
                             </div>
                         </div>  
                     </div>
-                   <?php endforeach; ?>                     
+                   <?php 
+                    if ($i++ == 3) break;
+                    endforeach; ?>                     
                 </div>
                 <div class="row justify-content-center">
                     <a href="#" class="btn btn-cta">Lihat Semua Laporan</a>
