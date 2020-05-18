@@ -163,7 +163,7 @@
                 <div class="container">
                     <div class="col-lg-8">
                     <h2>Sampaikan Aspirasi</h2>  
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laudantium quibusdam, ratione dolorum commodi labore doloribus quidem assumenda totam minus eaque unde sed blanditiis. Omnis sunt maxime error illum qui.</p>
+                    <p>Dalam demokrasi seperti ini aspirasi rakyat dapat disampaikan melalui wakil-wakilnya. Oleh karena itu, tidak semua rakyat turut serta dalam merumuskan dan menentukan kebijakan tentang permasalahan dalam pemerintahan negaranya.</p>
                     </div>
                 </div>
             </div>
