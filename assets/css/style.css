@@ -74,18 +74,10 @@ header > p{
     font-size: 18px;
 }
 
-.pending{
-    background-color: #fff;
-    border: 1px solid #6c757d;
-    color: #6c757d;
-    border-radius: 20px;
-    padding: 5px 10px;
-}
-
 .verify{
     background-color: #fff;
-    border: 1px solid #007bff;
-    color: #007bff;
+    border: 1px solid #28a745;
+    color: #28a745;
     border-radius: 20px;
     padding: 5px 10px;
 }
@@ -104,14 +96,6 @@ header > p{
     color: red;
     border-radius: 20px;
     padding: 5px 10px;
-}
-
-.done{
-    background-color: #fff;
-    border: 1px solid #28a745;
-    color: #28a745;
-    border-radius: 20px;
-    padding: 5px 10px; 
 }
 
 .section-laporan .laporan-heading{
@@ -211,18 +195,5 @@ header > p{
 .footer-address p{
     font-size: 18px;
     letter-spacing: 0.7px;
-}
-
-
-/* Login Page */
-
-.section-login{
-    margin-top: 200px;
-}
-
-.section-login .card{
-    border-radius: 30px;
-    padding-top: 20px;
-    width: 450px;
 }
 
