@@ -109,7 +109,7 @@ header > p{
 
 
 .divider-profile{
-    margin-top: -12%;
+    margin-top: -11%;
     margin-left: 1%;
     position: relative;
 }
@@ -182,6 +182,71 @@ aside{
     float: left;
     margin-left: 10px;
     overflow: hidden;
+}
+
+.nama-laporan {
+    padding-bottom: 0;
+}
+
+.pp-laporan{
+    height: 5px;
+}
+
+.list-content-laporan{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nama-laporan, .judul-laporan, .status-laporan, 
+.isi-laporan, .komentar-laporan{
+    padding-left: 0;
+}
+
+.nama-laporan span{
+    font-size: 20px;
+    color: #1B3C87;
+}
+
+.tgl-laporan{
+    padding-top: 4px;
+    padding-right: 0;
+}
+
+.tgl-laporan span{
+    font-size: 12px;
+    color: grey;
+}
+
+.komentar-laporan span{
+    padding-right: 16px;
+    font-size: 14px;
+}
+
+.kategori-laporan{
+    margin-left: -15px;
+}
+
+.judul-laporan{
+    padding-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1B3C87;
+}
+
+.status-laporan{
+    padding-top: 18px; 
+    padding-right:0;
+}
+
+.isi-laporan{
+    padding-top: 10px;
+}
+
+.jenis-laporan{
+    padding-left: 0; 
+    padding-top: 10px; 
+    color: grey; 
+    font-size: 14px;
 }
 
 .card-profile{

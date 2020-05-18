@@ -148,7 +148,7 @@
                             </div>
                         </div>  
                     </div>
-                    <?php endforeach; ?>                    
+                   <?php endforeach; ?>                     
                 </div>
                 <div class="row justify-content-center">
                     <a href="#" class="btn btn-cta">Lihat Semua Laporan</a>
