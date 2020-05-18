@@ -23,9 +23,12 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <!--jika sudah login -->
+                <?php if(isset($_SESSION["user_id"]) && isset($_SESSION["login"])):
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="page_laporan.php">LAPORAN</a>
                 </li>
+                <?php endif; ?>
                 <!-- -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">TENTANG</a>
