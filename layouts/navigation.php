@@ -26,9 +26,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="page_laporan.php">LAPORAN</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tambah_aspirasi.php">ASPIRASI</a>
-                </li>
                 <!-- -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">TENTANG</a>

@@ -98,35 +98,6 @@
                         <div>
                             <a href="tambah_pengaduan.php" class="btn btn-cta" style="width:22rem;"><i class="fas fa-plus">   Tambah Laporan</i></a>
                         </div>
-                        <!-- Kategori Populer -->
-                        <div class="card" style="margin-top: 20px;">
-                            <h5 style="margin-left: 18px; margin-top: 15px;">Kategori Populer</h5>
-                            <div class="card-body">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                        <th scope="col">Nama Kategori</th>
-                                        <th scope="col">Jumlah</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        <td>Kesehatan</td>
-                                        <td>129.343</td>
-                                        </tr>
-                                        <tr>
-                                        <td>Ekonomi</td>
-                                        <td>15433</td>
-                                        </tr>
-                                        <tr>
-                                        <td>Infrastruktur</td>
-                                        <td>10.232</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" style="text-decoration: none; font-size: 14px;">Lihat kategori lainnya</a>
-                            </div>
-                        </div>
                     </aside>
                 </div>
             </div>
