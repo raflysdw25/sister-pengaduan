@@ -8,18 +8,22 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="Masukkan email..." name="email" required>
             </div>
             <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap..." name="name" required>
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap..." name="nama" required>
             </div>
             <div class="form-group">
-                <label for="number">Nomor Handphone</label>
-                <input type="number" class="form-control" id="no_hp" placeholder="Masukkan nomor handphone..." name="number" required>
+                <label for="alamat">Alamat Rumah</label>
+                <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat lengkap..." name="alamat" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Nomor Handphone</label>
+                <input type="tel" class="form-control" id="telephone" placeholder="Masukkan nomor handphone..." name="telephone" required>
             </div>
             <div class="dropdown-divider"></div>
             <div class="form-group">
@@ -29,12 +33,12 @@
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Masukkan password..." name="password" required>
-            </div>
-        </form>
+            </div>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-        <button type="button" class="btn btn-cta">Daftar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+          <button type="submit" name="register" class="btn btn-cta">Daftar</button>
+        </form>
       </div>
     </div>
   </div>

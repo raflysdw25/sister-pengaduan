@@ -1,3 +1,17 @@
+<?php 
+
+    session_start();
+
+    if(isset($_POST["logout"])){
+        $_SESSION = [];
+        session_unset();
+        session_destroy();
+
+        header("location: index.php");
+        exit;
+    }
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 shadow-sm p-3 mb-5 bg-white">
     <div class="container">
         <a class="navbar-brand" href="index.php">
@@ -30,22 +44,29 @@
                 </li>
             </ul>
             <!--jika sudah login -->
+            <?php if(isset($_SESSION["user_id"]) && isset($_SESSION["login"])):
+                $user_id = $_SESSION["user_id"]; 
+                $user_profile = query("SELECT * FROM user_profile WHERE up_id = $user_id")[0];
+                ?>
             <ul class="navbar-nav ml-auto top-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         <img src="assets/img/members-1.jpg" alt="" class="pp">
-                        raflysdw25
+                        <?= $user_profile["nama"] ?>
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Profile</a>
                         <a class="dropdown-item" href="#">Notifikasi</a>
                         <a class="dropdown-item" href="#">Pengaturan</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" onclick="">Keluar</a>                         
+                        <form action="" method="post">
+                            <button class="dropdown-item" type="submit" name="logout" onclick="return confirm('Apakah anda ingin Keluar ? ')">Keluar</button>
+                        </form>                         
                         </script>
                     </div>
                 </li>            
             </ul>
+            <?php endif; ?>
         </div>
     </div>
 </nav>

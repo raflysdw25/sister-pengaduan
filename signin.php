@@ -1,3 +1,4 @@
+
 <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -8,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="" method="POST">
             <div class="form-group">
                 <label for="uName">Username</label>
                 <input type="text" class="form-control" id="uName" placeholder="Masukkan username..." name="uName" required>
@@ -18,11 +19,11 @@
                 <input type="password" class="form-control" id="password" placeholder="Masukkan password..." name="password" required>
             </div>
             <a href="#" class="btn-forgot-pwd"  style="text-decoration: none; font-size: 12px;">Lupa password?</a>
-        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-        <button type="button" class="btn btn-cta">Masuk</button>
+        <button type="submit" name="login" class="btn btn-cta">Masuk</button>
+        </form>
       </div>
     </div>
   </div>
