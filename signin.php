@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="POST">
+        <form action="" method="POST">             
             <div class="form-group">
                 <label for="uName">Username</label>
                 <input type="text" class="form-control" id="uName" placeholder="Masukkan username..." name="uName" required>

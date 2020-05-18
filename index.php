@@ -9,19 +9,14 @@
             echo 
             "<script> 
                 alert('Username/Password salah, silahkan coba lagi');                
+                document.location='index.php';
             </script>";   
         }
     }
 
     // Register
     if(isset($_POST["register"])){
-        $result = user_register($_POST);
-        if(!$result){
-            echo 
-            "<script> 
-                alert('Masih terdapat data yang tidak sesuai');                
-            </script>";   
-        }
+        $result = user_register($_POST);        
     }
 
     //Data Laporan

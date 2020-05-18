@@ -44,7 +44,8 @@
 
         }
 
-        return true;
+        $error = true;
+        return $error;
     }
 
     function user_register($data){
